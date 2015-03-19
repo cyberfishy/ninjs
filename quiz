@@ -1,0 +1,34 @@
+var quiz = [
+	["What is the first answer?","1"],
+	["What is the second answer?","2"],
+	["What is the third answer?","3"]
+];
+
+var score = 0 // initialize score
+
+function play(quiz){ // main game loop
+	for(var i=0, question, answer, max=quiz.length; i<max; i++) {
+			question = quiz[i][0];
+			answer = ask(question);
+			check(answer);
+		}
+	function ask(question) {
+		return prompt(question); // quiz[i][0] is the ith question
+		}
+		
+	function check(answer) {
+		if(answer === quiz[i][1]) { // quiz[i][1] is the ith answer
+			alert("Correct!"); // increase score by 1
+		score++;
+		} else {
+			alert("Oops -- wrong.");
+	}
+		
+	
+	function gameOver() { // inform the player that the game is done and display points
+			alert("Game over, you scored " + score + " points");
+		}		
+		// end of main game loop
+		gameOver();
+	}
+}
